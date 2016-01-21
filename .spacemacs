@@ -41,7 +41,8 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
-   '(rust-mode)
+   '(rust-mode
+     web-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -246,8 +247,8 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'nil)
-  (powerline-default-theme)
   (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+  (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   (setq js-indent-level 2)
   )
 
